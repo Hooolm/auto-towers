@@ -14,6 +14,7 @@
   - *Regen*: Some units may slowly regenerate their shield over time. (Default: 1 per tick)
 - **Speed**: The number of hexagons a unit can move per tick.  (Default: 0 for towers, 1 for monsters)
 - **Cooldown**: The number of ticks a unit must wait between attacks. (Default: 0)
+- **Armor**: Each attack is reduced by this number. (Default: 0)
 
 ### Effects and Conditions
 - **Aura**: Bestows additional stats or effects to adjacent allied or enemy units. (Default: range 1)
