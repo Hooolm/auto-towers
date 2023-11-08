@@ -39,3 +39,7 @@
   - *Priorities*: Dictates the first target for a unit when multiple enemies are in range. (Monster default: highest health first, Tower default: none)
   - *Except*: Specifies any targets that the unit will not target. (Default: none)
   - *Only*: Dictates exclusive targeting parameters for a unit. (Default: all)
+- **Respawn**: After death a unit can respawn. (Default: no)
+  - *Delay*: Amount of ticks before respawning. (Default: 1)
+  - *Times*: Amount of times the unit can respawn. (Default: 1)
+  - *Placement*: A respawn might specify another location than death. (Default: death location)
