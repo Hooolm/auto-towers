@@ -1,6 +1,9 @@
 # Auto-towers
 *Tower Defense Autochess Game Mechanics*
 
+## Overall
+A autochess game which rotates between combat phases and shop phases. Starting with a shop phase. In the shop phase you buy towers to defend against incomming monsters. A buy phase and combat phase we is called a round.
+
 ## Combat Units
 **Towers**: Defensive units that aim to keep all monsters at bay, attacking the nearest enemy minion within range. Basic towers are stationary.
 **Monsters**: Offensive units with the goal of crumbling towers. Basic monsters will move each tick.
@@ -43,3 +46,33 @@
   - *Delay*: Amount of ticks before respawning. (Default: 1)
   - *Times*: Amount of times the unit can respawn. (Default: 1)
   - *Placement*: A respawn might specify another location than death. (Default: death location)
+
+### Further ideas:
+Mana, energy?
+Types: conditions on types, efficiency against other unit types
+
+## Shop/currency questions:
+- How do you do get currency for your shop, only one currency?
+- What type of things can you buy?
+  - Towers
+  - Spells for augmenting towers
+  - Spells for augmenting monsters in the map
+    Spells for affecting other players
+- Can you save things bought between rounds, in "your hand"?
+- How do you build your board?
+  - Can you move your towers around without cost?
+
+## Game modes ideas
+
+### PvP
+One combat, everything resets after each battle.
+You can affect each others monsters and towers aswell as your own towers.
+- 1v1
+- XvX (Like hearthstone battlegrounds, compete untill you are last man standing)
+
+### PvE
+Minimum crangle: Outside of a battle you have access to another shop where you can modify overall properties "talents" and affect the maps your are playing.
+Even more crangle: You have character with classes and talents.
+
+Endlessmode: Monsters will keep spawning in respect to your map modifications, for ever.
+Dungeons: Monsters will keep spawning in respect to your map modifications, for x amount of rounds.
