@@ -42,10 +42,11 @@ A autochess game which rotates between combat phases and shop phases. Starting w
   - *Priorities*: Dictates the first target for a unit when multiple enemies are in range. (Monster default: highest health first, Tower default: none)
   - *Except*: Specifies any targets that the unit will not target. (Default: none)
   - *Only*: Dictates exclusive targeting parameters for a unit. (Default: all)
-- **Respawn**: After death a unit can respawn. (Default: no)
+- **Respawn**: After a dispawn commonly death a unit can respawn. (Default: no)
   - *Delay*: Amount of ticks before respawning. (Default: 1)
   - *Times*: Amount of times the unit can respawn. (Default: 1)
-  - *Placement*: A respawn might specify another location than death. (Default: death location)
+  - *Placement*: A respawn might specify another location than dispawn. (Default: dispawn location)
+- **Banish**: WHen banished the unit disappears from the board and respawns. See respawn for details. 
 
 ### Further ideas:
 Mana, energy?
@@ -53,14 +54,15 @@ Types: conditions on types, efficiency against other unit types
 
 ## Shop/currency questions:
 - How do you do get currency for your shop, only one currency?
-- What type of things can you buy?
+- What type of items can you buy?
   - Towers
   - Spells for augmenting towers
   - Spells for augmenting monsters in the map
     Spells for affecting other players
-- Can you save things bought between rounds, in "your hand"?
+- Can you save items bought between rounds, in your ivnentory?
 - How do you build your board?
   - Can you move your towers around without cost?
+- Can you freeze items in the shop?
 
 ## Game modes ideas
 
@@ -76,3 +78,18 @@ Even more crangle: You have character with classes and talents.
 
 Endlessmode: Monsters will keep spawning in respect to your map modifications, for ever.
 Dungeons: Monsters will keep spawning in respect to your map modifications, for x amount of rounds.
+
+## Implementation:
+
+#### Player Client
+The client features multiple views:
+- **Combat View**: Where the battles unfold, really just a combat-video-player.
+- **Shop View**: Where players purchase towers and spells.
+- **Menu View**: For navigating the game and accessing different modes.
+
+#### Server
+- Manages game sessions through a RESTful API.
+- Coordinates the shop phase and synchronizes transactions between players.
+- Pre-determines combat outcomes, providing the client with a sequence of events to render, allowing for accelerated playback or total skipping of battles.
+
+
