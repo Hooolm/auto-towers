@@ -46,7 +46,53 @@ A autochess game which rotates between combat phases and shop phases. Starting w
   - *Delay*: Amount of ticks before respawning. (Default: 1)
   - *Times*: Amount of times the unit can respawn. (Default: 1)
   - *Placement*: A respawn might specify another location than dispawn. (Default: dispawn location)
-- **Banish**: WHen banished the unit disappears from the board and respawns. See respawn for details. 
+- **Banish**: WHen banished the unit disappears from the board and respawns. See respawn for details.
+
+#### Statblock examples
+## Example Tower: Arcane Sentinel 🗼
+
+| Stat/Effect           | Value   |
+|-----------------------|---------|
+| 🎚️ Range              | 3       |
+| ⚔️ Damage             | 2       |
+| 💗 Health             | 5       |
+| 🛡️ Shield             | 3       |
+| 🦶 Speed              | 0 (Static) |
+| ⏲️ Cooldown           | 1       |
+| 🛠️ Armor              | 1       |
+| 🔮 Aura                | 1       |
+| 💧 Splash              | 0       |
+| 🕵️‍♂️ Stealth Detection | 2       |
+| ⛓️ Chain Attack        | 1       |
+| 💔 On Shield Drained   | Active  |
+| 💀 On Death            | Active  |
+| 🌱 On Spawn            | Active  |
+| 🔍 Targeting           | Closest |
+| 🔁 Respawn             | No      |
+
+## Example Monster: Goblin Raider 🧟
+
+| Stat/Effect           | Value   |
+|-----------------------|---------|
+| 🎚️ Range              | 1       |
+| ⚔️ Damage             | 3       |
+| 💗 Health             | 4       |
+| 🛡️ Shield             | 0       |
+| 🦶 Speed              | 2       |
+| ⏲️ Cooldown           | 0       |
+| 🛠️ Armor              | 0       |
+| 🔮 Aura                | None    |
+| 💧 Splash              | 0       |
+| 🕵️‍♂️ Stealth Detection | None    |
+| ⛓️ Chain Attack        | None    |
+| 💔 On Shield Drained   | None    |
+| 💀 On Death            | Explode |
+| 🌱 On Spawn            | None    |
+| 🔍 Targeting           | Random  |
+| 🔁 Respawn             | Yes     |
+| ⏳ Respawn Delay       | 3       |
+| 1️⃣ Respawn Times      | 1       |
+
 
 ### Further ideas:
 Mana, energy?
